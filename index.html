@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RideOn | Ride Request Matching</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="#"><span class="brand-icon">R</span> RideOn</a>
+    <div class="nav-links"><a href="#book">Book a ride</a><a href="#drivers">Drivers</a><a href="#how">How it works</a></div>
+    <a class="nav-cta" href="#book">Get a ride ↗</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> YOUR CITY. YOUR RIDE.</span>
+        <h1>Every journey<br>starts with a <em>ride.</em></h1>
+        <p>Book a ride in seconds. We match you with an available nearby driver so you can get where you need to go.</p>
+        <a class="primary-btn" href="#book">Book your ride <span>→</span></a>
+        <div class="trust"><div class="avatars"><b>A</b><b>R</b><b>S</b></div><span><strong>Quick & simple</strong><br>Easy ride booking experience</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="art-circle"></div>
+        <div class="map-lines"></div>
+        <div class="route route-one"></div><div class="route route-two"></div>
+        <div class="pin pin-a">●</div><div class="pin pin-b">●</div>
+        <div class="car-card"><span class="car-icon">🚕</span><div><strong>Your ride is nearby</strong><small>Driver matching made easy</small></div><span class="green-check">✓</span></div>
+        <div class="floating-tag">✦ Safe. Simple. Convenient.</div>
+      </div>
+    </section>
+
+    <section class="booking-section" id="book">
+      <div class="section-heading"><div><span class="eyebrow">LET'S GET MOVING</span><h2>Where are you going?</h2></div><span class="step">01 <i>/ 02</i></span></div>
+      <div class="booking-card">
+        <div class="form-fields">
+          <label>Your name<input id="passenger" type="text" placeholder="Enter your name"></label>
+          <label>Pickup location<input id="pickup" type="text" placeholder="Where should we pick you up?"></label>
+          <label>Destination<input id="destination" type="text" placeholder="Where are you going?"></label>
+          <label>Trip distance (km)<input id="distance" type="number" min="1" step="0.5" placeholder="e.g. 8"></label>
+        </div>
+        <button class="primary-btn full-btn" onclick="bookRide()">Find my ride <span>→</span></button>
+        <p class="fine-print">Demo estimate: ₹12 per kilometre. Final fare may vary.</p>
+        <div id="result" class="result" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="drivers-section" id="drivers">
+      <div class="section-heading"><div><span class="eyebrow">READY WHEN YOU ARE</span><h2>Meet our drivers</h2></div><span class="available-label"><span class="live-dot"></span> Available now</span></div>
+      <div class="driver-grid">
+        <article class="driver-card"><div class="driver-avatar avatar-orange">A</div><div><h3>Aman Kumar</h3><p>Bike · City Centre</p></div><span class="status">Available</span></article>
+        <article class="driver-card"><div class="driver-avatar avatar-blue">R</div><div><h3>Rahul Sharma</h3><p>Sedan · Bus Stand</p></div><span class="status">Available</span></article>
+        <article class="driver-card"><div class="driver-avatar avatar-green">S</div><div><h3>Simran Kaur</h3><p>Auto · Market Road</p></div><span class="status">Available</span></article>
+      </div>
+      <p class="note">Website preview uses sample drivers. The C program contains the working console-based matching logic.</p>
+    </section>
+
+    <section class="how-section" id="how">
+      <span class="eyebrow">THREE SIMPLE STEPS</span><h2>Your ride, made easy.</h2>
+      <div class="steps">
+        <div><span>01</span><h3>Enter your trip</h3><p>Add your pickup point and destination.</p></div>
+        <div><span>02</span><h3>Find a driver</h3><p>The system selects the nearest available driver.</p></div>
+        <div><span>03</span><h3>Ride confirmed</h3><p>See your driver and estimated trip fare.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-icon">R</span> RideOn</a><p>© 2026 RideOn · Ride Request Matching System</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
